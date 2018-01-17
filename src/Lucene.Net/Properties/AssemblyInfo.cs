@@ -29,6 +29,7 @@ using System.Runtime.CompilerServices;
 
 [assembly: CLSCompliant(true)]
 
+
 // for testing
 //[assembly: InternalsVisibleTo("Lucene.Net.Test, PublicKey=002400000480000094000000060200000024000052534131000400000100010075a07ce602f88e" +
 //                                                         "f263c7db8cb342c58ebd49ecdcc210fac874260b0213fb929ac3dcaf4f5b39744b800f99073eca" +
@@ -40,13 +41,49 @@ using System.Runtime.CompilerServices;
 // However, we still need InternalsVisibleTo in order to prevent making everything public just for the sake of testing.
 // This has broad implications because many methods are marked "protected internal", which means other assemblies
 // must update overridden methods to match.
-[assembly: InternalsVisibleTo("Lucene.Net.Tests")]
-[assembly: InternalsVisibleTo("Lucene.Net.TestFramework")]
-[assembly: InternalsVisibleTo("Lucene.Net.Misc")]
-[assembly: InternalsVisibleTo("Lucene.Net.Tests.ICU")] // For Analysis.Util.TestSegmentingTokenizerBase
-[assembly: InternalsVisibleTo("Lucene.Net.Tests.Misc")]
-[assembly: InternalsVisibleTo("Lucene.Net.Tests.QueryParser")]
-[assembly: InternalsVisibleTo("Lucene.Net.Tests.Cli")] // For lucene-cli
+[assembly: InternalsVisibleTo("Lucene.Net.Tests,PublicKey="+
+"002400000480000094000000060200000024000052534131000400000100010075a07ce602f88e"+
+"f263c7db8cb342c58ebd49ecdcc210fac874260b0213fb929ac3dcaf4f5b39744b800f99073eca"+
+"72aebfac5f7284e1d5f2c82012a804a140f06d7d043d83e830cdb606a04da2ad5374cc92c0a495"+
+"08437802fb4f8fb80a05e59f80afb99f4ccd0dfe44065743543c4b053b669509d29d332cd32a0c"+
+"b1e97e84")]
+[assembly: InternalsVisibleTo("Lucene.Net.TestFramework,PublicKey="+
+"002400000480000094000000060200000024000052534131000400000100010075a07ce602f88e"+
+"f263c7db8cb342c58ebd49ecdcc210fac874260b0213fb929ac3dcaf4f5b39744b800f99073eca"+
+"72aebfac5f7284e1d5f2c82012a804a140f06d7d043d83e830cdb606a04da2ad5374cc92c0a495"+
+"08437802fb4f8fb80a05e59f80afb99f4ccd0dfe44065743543c4b053b669509d29d332cd32a0c"+
+"b1e97e84")]
+
+[assembly: InternalsVisibleTo("Lucene.Net.Misc,PublicKey="+
+"002400000480000094000000060200000024000052534131000400000100010075a07ce602f88e"+
+"f263c7db8cb342c58ebd49ecdcc210fac874260b0213fb929ac3dcaf4f5b39744b800f99073eca"+
+"72aebfac5f7284e1d5f2c82012a804a140f06d7d043d83e830cdb606a04da2ad5374cc92c0a495"+
+"08437802fb4f8fb80a05e59f80afb99f4ccd0dfe44065743543c4b053b669509d29d332cd32a0c"+
+"b1e97e84")]
+[assembly: InternalsVisibleTo("Lucene.Net.Tests.ICU,PublicKey="+
+"002400000480000094000000060200000024000052534131000400000100010075a07ce602f88e"+
+"f263c7db8cb342c58ebd49ecdcc210fac874260b0213fb929ac3dcaf4f5b39744b800f99073eca"+
+"72aebfac5f7284e1d5f2c82012a804a140f06d7d043d83e830cdb606a04da2ad5374cc92c0a495"+
+"08437802fb4f8fb80a05e59f80afb99f4ccd0dfe44065743543c4b053b669509d29d332cd32a0c"+
+"b1e97e84")] // For Analysis.Util.TestSegmentingTokenizerBase
+[assembly: InternalsVisibleTo("Lucene.Net.Tests.Misc,PublicKey="+
+"002400000480000094000000060200000024000052534131000400000100010075a07ce602f88e"+
+"f263c7db8cb342c58ebd49ecdcc210fac874260b0213fb929ac3dcaf4f5b39744b800f99073eca"+
+"72aebfac5f7284e1d5f2c82012a804a140f06d7d043d83e830cdb606a04da2ad5374cc92c0a495"+
+"08437802fb4f8fb80a05e59f80afb99f4ccd0dfe44065743543c4b053b669509d29d332cd32a0c"+
+"b1e97e84")]
+[assembly: InternalsVisibleTo("Lucene.Net.Tests.QueryParser,PublicKey="+
+"002400000480000094000000060200000024000052534131000400000100010075a07ce602f88e"+
+"f263c7db8cb342c58ebd49ecdcc210fac874260b0213fb929ac3dcaf4f5b39744b800f99073eca"+
+"72aebfac5f7284e1d5f2c82012a804a140f06d7d043d83e830cdb606a04da2ad5374cc92c0a495"+
+"08437802fb4f8fb80a05e59f80afb99f4ccd0dfe44065743543c4b053b669509d29d332cd32a0c"+
+"b1e97e84")]
+[assembly: InternalsVisibleTo("Lucene.Net.Tests.Cli,PublicKey="+
+"002400000480000094000000060200000024000052534131000400000100010075a07ce602f88e"+
+"f263c7db8cb342c58ebd49ecdcc210fac874260b0213fb929ac3dcaf4f5b39744b800f99073eca"+
+"72aebfac5f7284e1d5f2c82012a804a140f06d7d043d83e830cdb606a04da2ad5374cc92c0a495"+
+"08437802fb4f8fb80a05e59f80afb99f4ccd0dfe44065743543c4b053b669509d29d332cd32a0c"+
+"b1e97e84")] // For lucene-cli
 
 // NOTE: Version information is in CommonAssemblyInfo.cs
 

@@ -33,10 +33,18 @@
     <AssemblyTitle>Lucene.Net.Tests.ICU</AssemblyTitle>
     <DefineConstants>$(DefineConstants);FEATURE_BREAKITERATOR</DefineConstants>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-    <RuntimeIdentifiers>win7-x86;win7-x64</RuntimeIdentifiers>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\..\Lucene.Net.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\Lucene.Net.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>    <RuntimeIdentifiers>win7-x86;win7-x64</RuntimeIdentifiers>
 
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-    <!--<Configurations>Debug;Release;Debug_NetCoreApp1_0;Release_NetCoreApp1_0</Configurations>-->
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\..\Lucene.Net.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\Lucene.Net.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>    <!--<Configurations>Debug;Release;Debug_NetCoreApp1_0;Release_NetCoreApp1_0</Configurations>-->
   </PropertyGroup>
 
   <ItemGroup>
