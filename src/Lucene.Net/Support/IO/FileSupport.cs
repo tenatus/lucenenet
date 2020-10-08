@@ -179,7 +179,7 @@ namespace Lucene.Net.Support.IO
             return Path.Combine(directory.FullName, string.Concat(prefix, randomFileName));
         }
 
-        private static readonly IDictionary<string, string> fileCanonPathCache = new Dictionary<string, string>();
+        //private static readonly IDictionary<string, string> fileCanonPathCache = new Dictionary<string, string>();
 
         /// <summary>
         /// Returns the absolute path of this <see cref="FileSystemInfo"/> with all references resolved and
@@ -199,10 +199,10 @@ namespace Lucene.Net.Support.IO
             byte[] result = Encoding.UTF8.GetBytes(absPath);
 
             string canonPath;
-            if (fileCanonPathCache.TryGetValue(absPath, out canonPath) && canonPath != null)
-            {
-                return canonPath;
-            }
+            //if (fileCanonPathCache.TryGetValue(absPath, out canonPath) && canonPath != null)
+            //{
+            //    return canonPath;
+            //}
 
             // LUCENENET TODO: On Unix, this resolves symbolic links. Not sure
             // if it is safe to assume Path.GetFullPath() does that for us.
@@ -298,7 +298,7 @@ namespace Lucene.Net.Support.IO
             //newResult = getCanonImpl(newResult);
             newLength = newResult.Length;
             canonPath = Encoding.UTF8.GetString(newResult, 0, newLength).TrimEnd('\0'); // LUCENENET: Eliminate null terminator char
-            fileCanonPathCache[absPath] = canonPath;
+            //fileCanonPathCache[absPath] = canonPath;
             return canonPath;
         }
     }
