@@ -73,7 +73,7 @@ task InstallSDK -description "This task makes sure the correct SDK version is in
 	Write-Host "Current SDK version: $sdkVersion" -ForegroundColor Yellow
 
 	# Make sure framework for .NET Core 2.0.0 is available
-	if (($sdkVersion.Contains("-")) -or ([version]$sdkVersion -lt ([version]"2.0.0")) -or ([version]$sdkVersion -ge ([version]"3.0.0"))) {
+	if (($sdkVersion.Contains("-")) -or ([version]$sdkVersion -lt ([version]"2.0.0"))) {
 		Write-Host "Requires SDK version 2.0.0 or greater, installing..." -ForegroundColor Red
 		Invoke-Expression "$base_directory\build\dotnet-install.ps1 -Version 2.0.0"
 	}
